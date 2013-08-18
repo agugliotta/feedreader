@@ -1,0 +1,21 @@
+<div class="container row panel callout">
+		<p>
+		  <h2>Name:<small> <%= @content.title %></small></h2>
+		</p>
+		<p>
+		  <h2>Description:<small> <%= @feed.description %></small></h2>
+		</p>
+	<%= link_to 'Edit', edit_feed_path(@feed), class: "tiny button" %> 
+	<%= link_to 'Back', feeds_path, class: "tiny button" %>
+</div>
+<hr>
+<hr>
+<% @content.entries.each do |entry| %>
+	<div class="container panel">
+	<h4>Title:<small> <%= link_to entry.title, entry.url %></small></h4>
+	<hr>
+	<p>
+		<%= raw entry.summary %>
+	</p>
+	</div>
+<% end %>

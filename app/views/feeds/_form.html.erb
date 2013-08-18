@@ -1,0 +1,31 @@
+<%= simple_form_for(@feed) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs ">
+    <div class="row">
+      <div class="large-6 columns">
+        <%= f.input :name %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="row large-6 columns">
+      <%= f.input :url %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="row large-6 columns">
+        <%= f.input :description %>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  </div>
+  
+<% end %>

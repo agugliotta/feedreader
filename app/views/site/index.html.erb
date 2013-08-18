@@ -1,0 +1,44 @@
+<% if current_user %>
+<div class="container row">
+	<h2>Latest Feeds</h2>
+</div>
+<div class="container row panel ">
+	<table style="width: 100%">
+		<thead>
+			<tr>
+			<th>Url</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @feeds.each do |feed| %>
+				<tr>
+					<td><%= link_to feed.name, feed.url %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+ 
+<% else %>
+<div class="panel">
+<h1>Share your feeds!</h1>
+<p>A simple app to track and share your beloved feeds with others.</p>
+<%= link_to "Get started today", new_user_registration_path, :class => "button button-large" %>
+</div>
+ 
+<hr>
+ 
+<div class="row">
+<div class="large-8 columns">
+<h3>12 Devs of Summer</h3>
+<p>
+12 Devs is an evolution of the 12 Devs of Xmas, a way to bring more cool web development articles to you throughout the year. However 12 Devs won’t just be about the tutorial and tips articles, we’re also going to be bringing you some great new features and events.
+</p>
+<p><a class="" href="http://12devs.co.uk" target="_blank">Learn more</a>.</p>
+</div>
+<div class="large-4 columns">
+<h3>About this app</h3>
+<p>This is a tutorial app developed by <a href="http://andreapavoni.com" target="_blank">Andrea Pavoni</a> as a companion to the rails article. Check the source code on <a href="http://github.com/apeacox/12dos-feeds" target="_blank">GitHub</a>. </p>
+</div>
+</div>
+<% end %>
