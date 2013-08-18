@@ -13,3 +13,7 @@ A feed reader in Ruby on Rails.
 - Simple Form
 - Feedzirra
 
+### Install
+1. git clone https://github.com/agugliotta/feedreader.git [folder]
+2. rake db:migrate
+3. Use it!
